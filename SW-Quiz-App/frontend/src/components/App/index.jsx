@@ -1,6 +1,8 @@
+import { Routes, Route, Link } from "react-router-dom";
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import HomePage from '../HomePage'
 import './styles.css'
 
 function App() {
@@ -8,7 +10,11 @@ function App() {
 
   return (
     <>
-      <h1>hello World</h1>
+
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+
+      </Routes>
     </>
   )
 }
