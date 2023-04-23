@@ -3,6 +3,8 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import HomePage from '../HomePage'
+import QuizPage from "../QuizPage";
+import MoreInfoPage from "../MoreInfoPage";
 import './styles.css'
 
 function App() {
@@ -13,7 +15,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage/>} />
-
+        <Route path="/quiz" element={<QuizPage/>} />
+        <Route path="/info" element={<MoreInfoPage/>} />
       </Routes>
     </>
   )

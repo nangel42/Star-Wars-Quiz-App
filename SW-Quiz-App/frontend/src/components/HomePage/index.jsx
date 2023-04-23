@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
     return (
         <>
@@ -7,14 +9,20 @@ export default function HomePage() {
 
             <div>
                 <p>Difficulty</p>
-                    <button>Easy</button>
-                    <button>Medium</button>
-                    <button>Hard</button>
+                    <Link to ="/quiz">
+                        <button>Easy</button>
+                        <br />
+                        <button>Medium</button>
+                        <br />
+                        <button>Hard</button>
+                    </Link>
             </div>
 
             <div>
                 <p>Want to sharpen your skills?</p>
-                <button>More Info</button>
+                    <Link to ="/info">
+                        <button>More Info</button>
+                    </Link>
             </div>
         </>
     )
