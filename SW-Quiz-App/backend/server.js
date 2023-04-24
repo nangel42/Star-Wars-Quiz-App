@@ -58,7 +58,7 @@ app.get('/api/seed', function (req, res) {
 
 // This tells our app to look at the `controllers/pets.js` file 
 // to handle all routes that begin with `localhost:3000/pets`
-app.use('/question', qCtrl)
+app.use('/api/question', qCtrl)
 
 // This tells our app to look at the `controllers/applications.js` file 
 // to handle all routes that begin with `localhost:3000/applications`

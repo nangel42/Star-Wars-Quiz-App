@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import DifficultyRating from '../DifficultyRating';
 
 export default function HomePage() {
+
+    
+
+
     return (
         <>
             <h1>Star Trivia!</h1>
@@ -10,11 +15,12 @@ export default function HomePage() {
             <div>
                 <p>Difficulty</p>
                     <Link to ="/quiz">
-                        <button>Easy</button>
+                        <button onClick={() => DifficultyRating("easy")}>Easy</button>
                         <br />
-                        <button>Medium</button>
+                        <button onClick={() => DifficultyRating("medium")}>Medium</button>
                         <br />
-                        <button>Hard</button>
+                        <button onClick={() => DifficultyRating("hard")}>Hard</button>
+
                     </Link>
             </div>
 
