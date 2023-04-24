@@ -48,18 +48,25 @@ export default function QuizPage() {
     let questionElements = null;
 
     if (questions.length > 0) {
-        questionElements = questions.map((question, i) => {
-            const answerElements = question.answers.map((answer, j) => (
+        const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+        // questionElements = questions.Math.random().map((question, i) => {
+            const answerElements = randomQuestion.answers.map((answer, j) => (
                 <button key={j}>{answer}</button>
-                ));
-                    return (
-                    <div key={i}>
-                        <p>{question.question}</p>
-                        {answerElements}
-                    </div>
+            ));
+                    // return (
+                    // <div key={i}>
+                    //     <p>{question.question}</p>
+                    //     {answerElements}
+                    // </div>
+        questionElements = (
+            <div>
+                <p>{randomQuestion.question}</p>
+                {answerElements}
+            </div>
         );
-        });
-    }
+        // });
+        };
+    
 
     return (
         <>
