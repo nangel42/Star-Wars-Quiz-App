@@ -11,7 +11,7 @@ const questions = [
         answers: ["Kashyyyk", "Tatooine", "Hoth", "Endor"],
         correctAnswer: "Kashyyyk",
         category: "Planets",
-        difficulty: "easy"
+        difficulty: "hard"
     },
     {
         question: "What is the name of the bounty hunter that captures Han Solo?",

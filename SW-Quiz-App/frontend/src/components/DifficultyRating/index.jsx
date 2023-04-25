@@ -1,6 +1,6 @@
 export default function DifficultyRating(difficulty) {
     if (difficulty === "easy") {
-        // console.log("easy")
+        console.log("easy")
         return "easy"
     }
     else if (difficulty === "medium") {
