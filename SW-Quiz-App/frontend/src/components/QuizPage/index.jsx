@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-// import { useState, useEffect } from 'react';
-// import DifficultyRating from '../DifficultyRating';
-// import { getQuestions } from "../../../utils/backend";
 import Questions from "../Questions";
-
-
 
 
 export default function QuizPage() {
