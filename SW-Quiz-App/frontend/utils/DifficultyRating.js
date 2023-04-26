@@ -1,4 +1,4 @@
-// export default function DifficultyRating(difficulty) {
+// export function DifficultyRating(difficulty) {
 //     if (difficulty === "Easy") {
 //         console.log("Easy")
 //         return "Easy"
