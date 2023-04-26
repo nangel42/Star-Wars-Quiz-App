@@ -13,95 +13,41 @@ export default function Questions() {
     //Steven is the GOAT for this one
     const { difficulty } = useParams();
 
-
+    //uses the useEffect hook to get the questions from the backend
     useEffect(() => {
         getQuestions().then(data => setQuestions(data))
-    }, [])
+    }, []);
 
-    // let questionElements = null;
+    // DRY code of the question elements
+    const renderQuestionElements = (difficulty) => {
+        // Filter questions by difficulty checking if the difficulty is equal to the difficulty in the params
+        const filteredQuestions = questions.filter(ques => ques.difficulty === difficulty);
 
-    // if (questions.length >0 && difficulty === "Easy" && questionLimit < 10) {
-    //     //Makes a random question chosen from the length of the questions objects list
-    //     const randomQuestion = questions[Math.floor(Math.random() * questions.length)]; 
-    //         const answerElements = randomQuestion.answers.map((answer, i) => (
-    //             //Create a button for each answer choice, and when clicked, run the handleAnswerClick function to determine if right or wrong
-    //             <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
-    //         ));
+        // Checks if there are no more questions or if the question limit is 10
+        if (filteredQuestions.length === 0 || questionLimit >= 10) {
+            return (
+                <div>
+                    <p>Right Answers: {rightAnswer}</p>
+                    <p>Wrong Answers: {wrongAnswer}</p>
+                </div>
+            );
+        }
 
-    //     questionElements = (
-    //         <div>
-    //             <p>{randomQuestion.question}</p>
-    //             {answerElements}
-    //         </div>
-    //     )
-    // } else if (questions.length >0 && difficulty === "Medium" && questionLimit < 10) {
-    //     //Makes a random question chosen from the length of the questions objects list
-    //     const randomQuestion = questions[Math.floor(Math.random() * questions.length)]; 
-    //         const answerElements = randomQuestion.answers.map((answer, i) => (
-    //             //Create a button for each answer choice, and when clicked, run the handleAnswerClick function to determine if right or wrong
-    //             <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
-    //         ));
+        // Pick a random question from the filtered questions
+        const randomQuestion = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
 
-    //     questionElements = (
-    //         <div>
-    //             <p>{randomQuestion.question}</p>
-    //             {answerElements}
-    //         </div>
-    //     )
-    // } else if (questions.length >0 && difficulty === "Hard" && questionLimit < 10) {
-    //     //Makes a random question chosen from the length of the questions objects list
-    //     const randomQuestion = questions[Math.floor(Math.random() * questions.length)]; 
-    //         const answerElements = randomQuestion.answers.map((answer, i) => (
-    //             //Create a button for each answer choice, and when clicked, run the handleAnswerClick function to determine if right or wrong
-    //             <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
-    //         ));
+        // Map answer choices to buttons
+        const answerElements = randomQuestion.answers.map((answer, i) => (
+            <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
+        ));
 
-    //     questionElements = (
-    //         <div>
-    //             <p>{randomQuestion.question}</p>
-    //             {answerElements}
-    //         </div>
-    //     )
-    // } else if (questionLimit === 10) {
-    //     questionElements = (
-    //         <div>
-    //             <p>Right Answers: {rightAnswer}</p>
-    //             <p>Wrong Answers: {wrongAnswer}</p>
-    //         </div>
-    //     )
-    // }else{
-    //     questionElements = (<div><p>Error, no data loaded, Please refresh and try again</p></div>)
-    // }
-
-const renderQuestionElements = (difficulty) => {
-    // Filter questions by difficulty
-    const filteredQuestions = questions.filter(q => q.difficulty === difficulty);
-
-    // Make sure there are questions left to ask
-    if (filteredQuestions.length === 0 || questionLimit >= 10) {
         return (
             <div>
-                <p>Right Answers: {rightAnswer}</p>
-                <p>Wrong Answers: {wrongAnswer}</p>
+                <p>{randomQuestion.question}</p>
+                {answerElements}
             </div>
         );
-    }
-
-    // Pick a random question from the filtered questions
-    const randomQuestion = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-
-    // Map answer choices to buttons
-    const answerElements = randomQuestion.answers.map((answer, i) => (
-        <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
-    ));
-
-    return (
-        <div>
-            <p>{randomQuestion.question}</p>
-            {answerElements}
-        </div>
-    );
-};
+    };
 
     const handleAnswerClick = (clickedAnswer, rightAnswer) => {
         if (clickedAnswer === rightAnswer) {

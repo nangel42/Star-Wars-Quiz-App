@@ -30,7 +30,7 @@ router.get('/', function (req, res) {
 // and redirects the user to the new pet's show page
 router.post('/', (req, res) => {
     db.Question.create(req.body)
-        .then(question => res.redirect('/question/' + question._id))
+        .then(question => res.json(question))
 })
 
 // Show Route (GET/Read): Will display an individual pet document
@@ -49,7 +49,7 @@ router.put('/:id', (req, res) => {
         req.body,
         { new: true }
     )
-        .then(question => res.redirect('/question/' + question._id))
+        .then(question => res.json(question))
 })
 
 // Destroy Route (DELETE/Delete): This route deletes a pet document 
