@@ -67,7 +67,6 @@ export default function Questions() {
 
 return (
     <>
-        {/* <h3>Question : {questionElements} </h3> */}
         <h3>Question : {renderQuestionElements(difficulty)}</h3>
     </>
 )};

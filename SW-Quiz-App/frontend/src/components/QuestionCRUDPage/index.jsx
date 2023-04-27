@@ -40,10 +40,20 @@ export default function CRUDSection() {
         setNewQuestion(!newQuestion)
     }
 
+
+
     // Execute form submission logic
     function handleSubmit(event) {
         // prevent the page from reloading
         event.preventDefault()
+        // split the answers into an array of strings
+        // const answers = createForm.answers.split(',').map(answer => answer.trim())
+
+        // create a new form object with the updated answers array
+        // const updatedForm = {
+        //     ...createForm,
+        //     answers
+        // }
         // clear the form
         setCreateForm({
             question: "",
@@ -55,7 +65,11 @@ export default function CRUDSection() {
         // close the form
         setNewQuestion(false)
 
-        postQuestions(createForm)
+        // Format the form data
+        const formData = { ...createForm }
+        formData.answers = formData.answers.split(',').map(answer => answer.trim())
+
+        postQuestions(formData)
             .then(() => refreshQuestions())
     }
 
@@ -95,12 +109,40 @@ export default function CRUDSection() {
                         onChange={handleInputChange}
                     />
                     <br />
-                    {/* <textarea
+                    <textarea
                         name="answers"
                         placeholder="Write 4 answers, separated by commas"
                         value={createForm.answers}
                         onChange={handleInputChange}
-                    /> */}
+                        // onBlur={(event) => {
+                        //     let answers = event.target.value.split(',').map(answer => answer.trim())
+                                // create a new form object with the updated answers array
+                                // let updatedForm = {
+                                //     ...createForm,
+                                //     answers
+                                // }
+                            
+                                // update the form state with the new object
+                                // setCreateForm(updatedForm)
+                            // }}
+
+
+                        // onChange = {(event) => {
+                        //     let newA = [...createForm.answers]
+                        //     newA[i] = event.target.value
+                        //     setCreateForm(prevState => ({
+                        //         ...prevState,
+                        //         answers: newA
+                        //     }))
+                        //     }}
+                        
+
+                    />
+                    {/* {createForm.answers.split(",").map((answer, i) => (
+                    <div key={i}>
+                        {answer}
+                    </div>
+                    ))} */}
                     <br />
                     <input
                         name="correctAnswer"

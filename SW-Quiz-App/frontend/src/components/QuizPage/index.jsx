@@ -12,11 +12,11 @@ export default function QuizPage() {
             
             <Questions />
 
-            <div>
+            <footer>
                 <Link to ="/">
                     <button>Back</button>
                 </Link>
-            </div>
+            </footer>
         </>
     )
 }

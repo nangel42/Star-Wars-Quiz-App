@@ -38,14 +38,28 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
             .then(() => refreshQuestions())
     }
 
+    //  Default JSX of each comment
+    let questionElement = <div>
+        <p>{data.question}</p>
+        <p>{data.difficulty}</p>
+        <div>
+            <button onClick={() => { setEditMode(true) }}>
+                Edit
+            </button>
+            <button onClick={handleDelete}>
+                Delete
+            </button>
+        </div>
+    </div>
+
     // Render a form that allows a user to edit a question on submit
-    let editFormElement = (
+    // if (editMode) {
+        questionElement = (
         <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div>
                 <label htmlFor="question">Question</label>
                 <input
                     type="text"
-                    className="form-control"
                     id="question"
                     name="question"
                     value={editForm.question}
@@ -54,72 +68,62 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
             </div>
 
             {/* map over answerrs */}
-            <div className="form-group">
+            <div>
                 <label htmlFor="answers">Answers</label>
                 {editForm.answers.map((answer, i) => (
-                <input
-                    key = {i}
-                    type="text"
-                    className="form-control"
-                    id={`answers${i}`}
-                    name={`answers${i}`}
-                    value={answer}
-                    onChange={(event) => {
-                        let newAnswers = [...editForm.answers]
-                        newAnswers[i] = event.target.value
-                        setEditForm(prevState => ({
-                            ...prevState,
-                            answers: newAnswers
-                        }))
-                    }}
-                />
+                    <input
+                        key = {i}
+                        type="text"
+                        id={`answers${i}`}
+                        name={`answers${i}`}
+                        value={answer}
+                        // make a new array of answers and updates state
+                        onChange={(event) => {
+                            let newAnswers = [...editForm.answers]
+                            newAnswers[i] = event.target.value
+                            setEditForm(prevState => ({
+                                ...prevState,
+                                answers: newAnswers
+                            }))
+                        }}
+                    />
                 ))}
             </div>
 
-            <div className="form-group">
+            <div>
                 <label htmlFor="correctAnswer">Correct Answer</label>
                 <input
                     type="text"
-                    className="form-control"
                     id="correctAnswer"
                     name="correctAnswer"
                     value={editForm.correctAnswer}
                     onChange={handleInputChange}
                 />
             </div>
-            <div className="form-group">
+            <div>
                 <label htmlFor="category">Category</label>
                 <input
                     type="text"
-                    className="form-control"
                     id="category"
                     name="category"
                     value={editForm.category}
                     onChange={handleInputChange}
                 />
             </div>
-            <div className="form-group">
+            <div>
                 <label htmlFor="difficulty">Difficulty</label>
                 <input
                     type="text"
-                    className="form-control"
                     id="difficulty"
                     name="difficulty"
                     value={editForm.difficulty}
                     onChange={handleInputChange}
                 />
             </div>
-            <button type="submit" className="btn btn-submit">Submit</button>
+            <button type="submit" className="btn btn-submit" >Submit</button>
             <button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</button>
         </form>
     )
-    return editFormElement
-
-
-
-
-
-
-
-
+    return questionElement
 }
+// }
