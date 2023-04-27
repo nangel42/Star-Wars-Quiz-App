@@ -7,44 +7,41 @@ import MoreInfoDisplay from "../MoreInfoDisplay";
 export default function MoreInfoPage() {
 
     const [info, setInfo] = useState({})
+    const [category, setCategory] = useState('')
 
+    //category changes when buttons are clicked, causes the function to run again
     useEffect(() => {
-      getInfo('https://swapi.dev/api/')
-        .then(res => {
-          setInfo(res)
-        // console.log(res)
-        })
-    }, [])
+        if (category) {
+            getInfo('https://swapi.dev/api/' + category + '/')
+                .then(res => {
+                    setInfo(res)
+                    // console.log(res)
+                })
+            }
+    }, [category])
 
-    console.log(info)
+    // console.log(info)
 
-
-    const Films = () => {
-        getInfo('https://swapi.dev/api/films/')
-        .then(res => {
-            setInfo(prevState => ({
-                ...prevState,
-                films: res.results
-                }))
-        })
-    }
+    const categoryChange = (event) => {
+        setCategory(event.target.value);
+        }
 
 
     return (
         <>
             <h1>More Info Page!</h1>
 
-            <button onClick = {Films}>Films</button>
-            <button>People</button>
-            <button>Planets</button>
-            <button>Species</button>
-            <button>Starships</button>
-            <button>Vehicles</button>
+            <button onClick={() => setCategory('films')}>Films</button>
+            <button onClick={() => setCategory('people')}>People</button>
+            <button onClick={() => setCategory('planets')}>Planets</button>
+            <button onClick={() => setCategory('species')}>Species</button>
+            <button onClick={() => setCategory('starships')}>Starships</button>
+            <button onClick={() => setCategory('vehicles')}>Vehicles</button>
 
             <br />
             <br />
 
-            <MoreInfoDisplay />
+            <MoreInfoDisplay data={info} category={category}/>
 
             <br />
             <br />
