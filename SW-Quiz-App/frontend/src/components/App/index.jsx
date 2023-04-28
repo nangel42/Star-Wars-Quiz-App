@@ -4,6 +4,7 @@ import HomePage from '../HomePage'
 import QuizPage from "../QuizPage";
 import MoreInfoPage from "../MoreInfoPage";
 import QuestionCRUDPage from "../QuestionCRUDPage";
+import DetailPage from "../DetailPage";
 import './styles.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/quiz/:difficulty" element={<QuizPage/>} />
         <Route path="/info" element={<MoreInfoPage/>} />
         <Route path="/question" element={<QuestionCRUDPage/>} />
+        <Route path="/detail/:category/:id" element={<DetailPage/>} />
       </Routes>
     </>
   )

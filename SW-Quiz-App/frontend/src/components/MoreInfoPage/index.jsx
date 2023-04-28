@@ -54,3 +54,6 @@ export default function MoreInfoPage() {
         </>
     )
 }
+
+// refrences 
+// https://www.youtube.com/watch?v=qb6sMTeyLJY&t=879s
