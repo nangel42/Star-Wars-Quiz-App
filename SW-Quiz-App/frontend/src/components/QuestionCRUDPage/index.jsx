@@ -46,14 +46,7 @@ export default function CRUDSection() {
     function handleSubmit(event) {
         // prevent the page from reloading
         event.preventDefault()
-        // split the answers into an array of strings
-        // const answers = createForm.answers.split(',').map(answer => answer.trim())
 
-        // create a new form object with the updated answers array
-        // const updatedForm = {
-        //     ...createForm,
-        //     answers
-        // }
         // clear the form
         setCreateForm({
             question: "",
@@ -67,6 +60,7 @@ export default function CRUDSection() {
 
         // Format the form data
         const formData = { ...createForm }
+        //Split at every comma, then trim the whitespace
         formData.answers = formData.answers.split(',').map(answer => answer.trim())
 
         postQuestions(formData)
@@ -113,36 +107,8 @@ export default function CRUDSection() {
                         name="answers"
                         placeholder="Write 4 answers, separated by commas"
                         value={createForm.answers}
-                        onChange={handleInputChange}
-                        // onBlur={(event) => {
-                        //     let answers = event.target.value.split(',').map(answer => answer.trim())
-                                // create a new form object with the updated answers array
-                                // let updatedForm = {
-                                //     ...createForm,
-                                //     answers
-                                // }
-                            
-                                // update the form state with the new object
-                                // setCreateForm(updatedForm)
-                            // }}
-
-
-                        // onChange = {(event) => {
-                        //     let newA = [...createForm.answers]
-                        //     newA[i] = event.target.value
-                        //     setCreateForm(prevState => ({
-                        //         ...prevState,
-                        //         answers: newA
-                        //     }))
-                        //     }}
-                        
-
+                        onChange={handleInputChange}               
                     />
-                    {/* {createForm.answers.split(",").map((answer, i) => (
-                    <div key={i}>
-                        {answer}
-                    </div>
-                    ))} */}
                     <br />
                     <input
                         name="correctAnswer"

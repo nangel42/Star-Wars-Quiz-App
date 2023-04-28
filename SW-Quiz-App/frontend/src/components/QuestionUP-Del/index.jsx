@@ -27,7 +27,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
         // close the form
         setEditMode(false)
         // refresh the questions
-        updateQuestions(data._id, editForm)
+        updateQuestions(editForm, data._id)
             .then(() => refreshQuestions())
     }
 
@@ -53,8 +53,8 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
     </div>
 
     // Render a form that allows a user to edit a question on submit
-    // if (editMode) {
-        questionElement = (
+    if (editMode) {
+        questionElement = 
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="question">Question</label>
@@ -121,9 +121,11 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
                 />
             </div>
             <button type="submit" className="btn btn-submit" >Submit</button>
+            <button type="button" className="btn btn-cancel" onClick={() => { setEditMode(false) }}>Cancel</button>
             <button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</button>
         </form>
-    )
-    return questionElement
+    
+    
 }
-// }
+return questionElement
+}

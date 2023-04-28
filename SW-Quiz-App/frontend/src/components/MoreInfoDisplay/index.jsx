@@ -9,7 +9,7 @@ export default function MoreInfoDisplay({ data, category }) {
 
     if (data.results && data.results.length > 0) {
         let apiNameData = data.results.map((name, i) => { 
-            console.log(category)
+            // console.log(category)
             return (
                 <div key={i}>
                     <Link to={`/detail/${category}/${i + 1}`}>
@@ -21,7 +21,7 @@ export default function MoreInfoDisplay({ data, category }) {
         let filmData = data.results.map((film, i) => { 
             return (
                 <div key={i}>
-                    <Link to="/detail">
+                    <Link to={`/detail/${category}/${i + 1}`}>
                         {film.title}
                     </Link>
                 </div>
