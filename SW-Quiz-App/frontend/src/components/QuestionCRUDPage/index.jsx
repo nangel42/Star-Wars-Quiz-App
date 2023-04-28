@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getQuestions, postQuestions} from '../../../utils/backend'
 import QuestionUPDel from '../QuestionUP-Del'
+import { Button, Form, Input, Select } from 'antd'
 
 
 
 export default function CRUDSection() {
 
+    const { Option } = Select;
     const [existingQuestions, setExistingQuestions] = useState([])
     const [newQuestion, setNewQuestion] = useState(false)
     const [createForm, setCreateForm] = useState({
@@ -16,19 +18,24 @@ export default function CRUDSection() {
         category: "",
         difficulty: "",
     })
+    
 
     useEffect(() => {
         getQuestions().then(data => setExistingQuestions(data))
     }, [])
     
 
-    // Update the form fields as the user types
+    // Update the form fields as the user types ONLY if event target is defined
     function handleInputChange(event) {
-        setCreateForm(prevState => ({
-            ...prevState,
-            [event.target.name]: event.target.value
-        }))
+        if (event.target) {
+            setCreateForm(prevState => ({
+                ...prevState,
+                [event.target.name]: event.target.value
+            }))
+        }
     }
+      
+
 
     function refreshQuestions() {
         getQuestions().then(data => setExistingQuestions(data))
@@ -67,6 +74,8 @@ export default function CRUDSection() {
             .then(() => refreshQuestions())
     }
 
+      
+
     // conditionally render questions
     let questionElements = [<p key='0' className='text-center'>No questions yet, be the first to make one!</p>]
     if (existingQuestions.length > 0) {
@@ -91,17 +100,111 @@ export default function CRUDSection() {
 
         <div>
             <h1>Viewer Insights</h1>
-            <button onClick={toggleCreateForm}>
+            <Button onClick={toggleCreateForm}>
                 {btnText}
-            </button>
-            {
-                newQuestion && <form onSubmit={handleSubmit}>
+            </Button>
+
+            {newQuestion && (
+          <Form onSubmit={handleSubmit} layout="vertical">
+
+                <Form.Item
+                label="New Question"
+                name="question"
+                rules={[{ required: true, message: "Please input a question!" }]}
+                >
+                    <Input
+                    placeholder="New Question"
+                    name="question"
+                    value={createForm.question}
+                    onChange={handleInputChange}
+                    />
+                </Form.Item>
+
+
+                <Form.Item
+                label="Answers"
+                name="answers"
+                rules={[{ required: true, message: "Please input 4 answers!" }]}
+                >
+                    <Input.TextArea
+                    placeholder="Write 4 answers, separated by commas"
+                    name="answers"
+                    value={createForm.answers}
+                    onChange={handleInputChange}
+                    />
+                </Form.Item>
+
+
+                <Form.Item
+                label="Correct Answer"
+                name="correctAnswer"
+                rules={[{ required: true, message: "Please input the correct answer!" }]}
+                >
+                    <Input
+                    placeholder="What is the correct answer?"
+                    name="correctAnswer"
+                    value={createForm.correctAnswer}
+                    onChange={handleInputChange}
+                    />
+                </Form.Item>
+
+
+                <Form.Item label="Category" name="category" rules={[{ required: true, message: 'Please select a category!' }]}>
+                    <Select placeholder="Select a category" name="category" value={createForm.category} onChange={handleInputChange}>
+                        <Select.Option value="Films">Films</Select.Option>
+                        <Select.Option value="People">People</Select.Option>
+                        <Select.Option value="Planets">Planets</Select.Option>
+                        <Select.Option value="Species">Species</Select.Option>
+                        <Select.Option value="Starships">Starships</Select.Option>
+                        <Select.Option value="Vehicles">Vehicles</Select.Option>
+                    </Select>
+                </Form.Item>
+
+
+                <Form.Item
+                label="Difficulty"
+                name="difficulty"
+                rules={[{ required: true, message: "Please select a difficulty!" },]}
+                >
+                    <Select placeholder="Select a difficulty" name="difficulty" value={createForm.difficulty} onChange={handleInputChange}>
+                        <Option value="Easy">Easy</Option>
+                        <Option value="Medium">Medium</Option>
+                        <Option value="Hard">Hard</Option>
+                    </Select>
+                </Form.Item>
+
+
+                <Button type="primary" htmlType="button" onClick={handleSubmit}>
+                    Post
+                </Button>
+                {/* <Button onClick={(e) => handleSubmit(e)}>Submit</Button> */}
+
+          </Form>
+        )}
+
+
+            {questionElements}
+        </div>
+
+        <div>
+            <Link to ="/">
+                <Button>Back</Button>
+            </Link>
+        </div>
+    </>
+    )
+}
+
+            {/* { newQuestion && 
+                <form onSubmit={handleSubmit}>
+
                     <input
                         name="question"
                         placeholder="New Question"
                         value={createForm.question}
                         onChange={handleInputChange}
                     />
+
                     <br />
                     <textarea
                         name="answers"
@@ -130,19 +233,8 @@ export default function CRUDSection() {
                         value={createForm.difficulty}
                         onChange={handleInputChange}
                     />
-                    <button type="submit">
+                    <Button type="submit">
                         Post
-                    </button>
+                    </Button>
                 </form>
-            }
-            {questionElements}
-        </div>
-
-        <div>
-            <Link to ="/">
-                <button>Back</button>
-            </Link>
-        </div>
-    </>
-    )
-}
+            } */}

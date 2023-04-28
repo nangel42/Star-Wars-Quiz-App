@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { updateQuestions, deleteQuestions } from '../../../utils/backend'
+import { Button } from 'antd'
+
 
 export default function QuestionUPDel({ data, refreshQuestions }) {
 
@@ -43,12 +45,12 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
         <p>{data.question}</p>
         <p>{data.difficulty}</p>
         <div>
-            <button onClick={() => { setEditMode(true) }}>
+            <Button onClick={() => { setEditMode(true) }}>
                 Edit
-            </button>
-            <button onClick={handleDelete}>
+            </Button>
+            <Button onClick={handleDelete}>
                 Delete
-            </button>
+            </Button>
         </div>
     </div>
 
@@ -120,9 +122,9 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
                     onChange={handleInputChange}
                 />
             </div>
-            <button type="submit" className="btn btn-submit" >Submit</button>
-            <button type="button" className="btn btn-cancel" onClick={() => { setEditMode(false) }}>Cancel</button>
-            <button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</button>
+            <Button type="submit" className="btn btn-submit" >Submit</Button>
+            <Button type="button" className="btn btn-cancel" onClick={() => { setEditMode(false) }}>Cancel</Button>
+            <Button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</Button>
         </form>
     
     

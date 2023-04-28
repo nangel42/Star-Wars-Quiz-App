@@ -1,6 +1,7 @@
 import { getQuestions } from "../../../utils/backend";
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { Button } from 'antd';
 
 
 
@@ -38,7 +39,7 @@ export default function Questions() {
 
         // Map answer choices to buttons
         const answerElements = randomQuestion.answers.map((answer, i) => (
-            <button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</button> 
+            <Button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</Button> 
         ));
 
         return (
