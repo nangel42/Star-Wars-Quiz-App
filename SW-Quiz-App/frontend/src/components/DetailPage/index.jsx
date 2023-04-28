@@ -35,7 +35,7 @@ export default function DetailPage() {
                 <>
                     <h1>Star Wars Films!</h1>
                     <h2>{ apiDetail.title }</h2>
-                    {/* <Link to="/info"><button>Back</button></Link> */}
+                    <Link to="/info"><button>Back</button></Link>
                 </>
             )
         } else if (category === "people") {
