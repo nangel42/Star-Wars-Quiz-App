@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import DetailPage from "../DetailPage"
 
 
+
 export default function MoreInfoDisplay({ data, category }) {
 
     // console.log(category)

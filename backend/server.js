@@ -35,6 +35,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 // use the React build folder for static files
 app.use(express.static(path.join(path.dirname(__dirname), 'frontend', 'dist')))
+// Any other route not matching the routes above gets routed by React
+
+
 
 
 /* Mount routes
