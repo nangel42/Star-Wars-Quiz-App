@@ -1,10 +1,9 @@
 /* Require modules
 --------------------------------------------------------------- */
 require('dotenv').config()
-const path = require('path');
 const express = require('express');
 const cors = require('cors')
-
+const path = require('path');
 
 /* Require the db connection, models, and seed data
 --------------------------------------------------------------- */
