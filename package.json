@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "vite",
     "backend": "nodemon backend/server.js",
-    "start": "node --max_old_space_size=2560 vite build && node backend/server.js"
+    "start": "vite build && node backend/server.js"
   },
   "keywords": [],
   "author": "",
