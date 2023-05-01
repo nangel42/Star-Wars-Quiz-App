@@ -54,7 +54,6 @@ export default function HomePage() {
                 </Link>
             </div>
 
-            <h1>TEST</h1>
         </>
     )
 }
