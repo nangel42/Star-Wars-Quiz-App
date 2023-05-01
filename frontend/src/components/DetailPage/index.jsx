@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { apiInfo } from "../../../utils/api"
 import axios from "axios";
 import { Button } from 'antd';
+import { LeftOutlined, LoadingOutlined } from '@ant-design/icons';
 
 export default function DetailPage() {
 
@@ -44,6 +45,12 @@ export default function DetailPage() {
         if (category === "films") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars Films!</h1>
                     <br />
                     <h2>{ apiDetail.title }</h2>
@@ -68,12 +75,18 @@ export default function DetailPage() {
                     </ul> */}
 
 
-                    <Link to="/info"><Button>Back</Button></Link>
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         } else if (category === "people") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars People!</h1>
                     <h3>{ apiDetail.name } </h3>
                     <p>Birth Year: { apiDetail.birth_year }</p>
@@ -81,13 +94,18 @@ export default function DetailPage() {
                     <p>Mass: { apiDetail.mass } kg (About {convertToPounds(apiDetail.mass)})</p>
                     <p>Hair Color: { apiDetail.hair_color }</p>
 
-
-                    <Link to="/info"><Button>Back</Button></Link>
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         } else if (category === "planets") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars Planets!</h1>
                     <h3>{ apiDetail.name } </h3>
                     <br />
@@ -100,14 +118,18 @@ export default function DetailPage() {
                     <p>Diameter: { apiDetail.diameter }</p>
                     <p>Surface Water: { apiDetail.surface_water }</p>
 
-
-
-                    <Link to="/info"><Button>Back</Button></Link>
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         } else if (category === "species") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars Species!</h1>
                     <h3>{ apiDetail.name } </h3>
                     <p>Classification: { apiDetail.classification }</p>
@@ -116,30 +138,43 @@ export default function DetailPage() {
                     <p>Average Lifespan: { apiDetail.average_lifespan } years</p>
                     <p>Language: { apiDetail.language }</p>
 
-
-
-                    <Link to="/info"><Button>Back</Button></Link>
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         } else if (category === "starships") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars Starships!</h1>
                     <h2>{ apiDetail.name } </h2>
-                    <Link to="/info"><Button>Back</Button></Link>
+
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         } else if (category === "vehicles") {
             return (
                 <>
+                    <nav>
+                        <Link to ="/">
+                            <LeftOutlined />
+                        </Link>
+                    </nav>
+
                     <h1>Star Wars Vehicles!</h1>
                     <h2>{ apiDetail.name } </h2>
-                    <Link to="/info"><Button>Back</Button></Link>
+
+                    {/* <Link to="/info"><Button>Back</Button></Link> */}
                 </>
             )
         }
     } else {
-        return (<h1>Loading...</h1>)
+        // return (<h1>Loading...</h1>)
+        return (<div className="loading"><LoadingOutlined /></div>)
     }
 
 

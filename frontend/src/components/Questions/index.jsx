@@ -28,8 +28,8 @@ export default function Questions() {
         if (filteredQuestions.length === 0 || questionLimit >= 10) {
             return (
                 <div>
-                    <p>Right Answers: {rightAnswer}</p>
-                    <p>Wrong Answers: {wrongAnswer}</p>
+                    <p className="RightAnswers">Right Answers: {rightAnswer}</p>
+                    <p className="WrongAnswers">Wrong Answers: {wrongAnswer}</p>
                 </div>
             );
         }
@@ -39,7 +39,7 @@ export default function Questions() {
 
         // Map answer choices to buttons
         const answerElements = randomQuestion.answers.map((answer, i) => (
-            <Button key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</Button> 
+            <Button className="answerButtons" key={i} onClick= {() => handleAnswerClick(answer, randomQuestion.correctAnswer)}>{answer}</Button> 
         ));
 
         return (

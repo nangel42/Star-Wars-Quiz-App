@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Questions from "../Questions";
 import { useParams } from "react-router-dom";
-import { Button } from 'antd';
-
+import { LeftOutlined } from '@ant-design/icons';
 
 export default function QuizPage() {
 
@@ -10,23 +9,27 @@ export default function QuizPage() {
 
     return (
         <>
+        <nav>
+            <Link to ="/">
+                <LeftOutlined />
+            </Link>
+        </nav>
             <h1>Quiz Page!</h1>
-
-                <br />
 
             <p>Difficulty:  { difficulty }</p>
 
+                <br />
                 <br />
             
             <Questions />
 
                 <br />
 
-            <footer>
+            {/* <footer>
                 <Link to ="/">
                     <Button>Back</Button>
                 </Link>
-            </footer>
+            </footer> */}
         </>
     )
 }

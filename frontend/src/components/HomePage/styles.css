@@ -128,6 +128,60 @@ body {
     padding: 80px;
   }
 
+  .answerButtons {
+    margin: 5%;
+    padding: auto;
+    font-weight: bold;
+    width: 40%;
+    height: 40%;
+  }
+
+  .RightAnswers{
+    color: #80d46b;
+  }
+
+  .WrongAnswers{
+    color: #cf3e3e;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  nav a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  nav a svg {
+    margin-right: 10px;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  @media (max-width: 1250px) {
+    .answerButtons {
+      width: 80%;
+      height: 80%;
+      margin: 2%;
+    }
+}
+
   /* refrences
   https://www.schemecolor.com/star-wars-logo-colors.php 
   https://www.color-hex.com/color-palette/47145*/

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { getQuestions, postQuestions} from '../../../utils/backend'
 import QuestionUPDel from '../QuestionUP-Del'
 import { Button, Form, Input, Select } from 'antd'
+import { LeftOutlined } from '@ant-design/icons';
 
 
 
@@ -96,6 +97,12 @@ export default function CRUDSection() {
 
     return (
     <>
+        <nav>
+            <Link to ="/">
+                <LeftOutlined />
+            </Link>
+        </nav>
+
         <h1>Create a Question!</h1>
         <h2>Or change one! (Don't Cheat!)</h2>
 
@@ -189,11 +196,11 @@ export default function CRUDSection() {
             {questionElements}
         </div>
 
-        <div>
+        {/* <div>
             <Link to ="/">
                 <Button>Back</Button>
             </Link>
-        </div>
+        </div> */}
     </>
     )
 }

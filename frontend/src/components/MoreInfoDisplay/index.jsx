@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import DetailPage from "../DetailPage"
-
+import { LoadingOutlined } from '@ant-design/icons';
 
 
 export default function MoreInfoDisplay({ data, category }) {
@@ -74,7 +74,8 @@ export default function MoreInfoDisplay({ data, category }) {
     } else if (!category) {
         return (<h1>Click a button to learn more about Star Wars!</h1>)
     } else {
-        return (<h1>Loading...</h1>)
+        // return (<h1>Loading...</h1>)
+        return (<div className="loading"><LoadingOutlined /></div>)
     }
 }
 

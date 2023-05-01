@@ -4,6 +4,7 @@ import { getInfo } from "../../../utils/api"
 import { useParams } from 'react-router-dom'
 import MoreInfoDisplay from "../MoreInfoDisplay";
 import { Button } from 'antd';
+import { LeftOutlined } from '@ant-design/icons';
 
 export default function MoreInfoPage() {
 
@@ -30,6 +31,12 @@ export default function MoreInfoPage() {
 
     return (
         <>
+            <nav>
+                <Link to ="/">
+                    <LeftOutlined />
+                </Link>
+            </nav>
+
             <h1>More Info Page!</h1>
 
             <button onClick={() => setCategory('films')}>Films</button>
@@ -47,11 +54,11 @@ export default function MoreInfoPage() {
             <br />
             <br />
 
-            <footer>
+            {/* <footer>
                 <Link to ="/">
                     <Button>Back</Button>
                 </Link>
-            </footer>
+            </footer> */}
         </>
     )
 }
