@@ -23,7 +23,19 @@ npm i react-router-dom axios antd
 ```
 
 # How to Browse "Star Trivia!"
+DISCLAIMER: "Star Trivia!" is a work on progress, it will be updated and these pictures may be outdated!
 
+This is the Home page, feel free to click any buttons to browse.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Homepage.png" /></p>
+
+This is the Quiz page, where the main quiz will be taken.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Quizpage.png" /></p>
+
+This is the Create a question page.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Createpage.png" /></p>
+
+And finally, this is the More information page, powered by SWAPI.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Moreinfopage.png" /></p>
 
 # Technology Used
 * ANT Design
@@ -49,7 +61,7 @@ I plan on implementing a few new steps...
 * Links:
 
   <p align="left">
-  	<a target="_blank" rel="noopener noreferrer" href="https://github.com/nangel42"><img src="./README-Pictures/GitHub-logo-white.png" width="100" height="auto"/></a> 
-  	<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nicolasangel/"><img src="./README-Pictures/linkedin.png" width="55" height="auto"/></a> 
-  	<a target="_blank" rel="noopener noreferrer" href="https://nangel42.github.io/Nicolas-Angel-Portfolio/"><img src="./README-Pictures/website-white.png" width="60" height="auto"/></a> 
+  	<a target="_blank" rel="noopener noreferrer" href="https://github.com/nangel42"><img src= "frontend/src/assets/GitHub-logo-white.png" width="100" height="auto"/></a> 
+  	<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nicolasangel/"><img src="frontend/src/assets/linkedin.png" width="55" height="auto"/></a> 
+  	<a target="_blank" rel="noopener noreferrer" href="https://nangel42.github.io/Nicolas-Angel-Portfolio/"><img src="frontend/src/assets/website-white.png" width="60" height="auto"/></a> 
   </p>
