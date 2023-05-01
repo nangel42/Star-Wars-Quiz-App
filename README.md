@@ -2,13 +2,13 @@
 By: Nicolas Angel
 <p align="center"><img src="frontend/src/assets/DarthVader.gif" /></p>
 
-# Link to Star Trivia!
+# Link to "Star Trivia!"
 <a href="https://star-wars-trivia-game.herokuapp.com/">Click Here!</a>
 
 # Project Description
-Star Trivi is my First attempt at a MERN stack app. This was designed as a fun, easy to use app and friendly to all ages.
+"Star Trivia!" is my First attempt at a MERN stack app. This was designed as a fun, easy to use app and friendly to all ages.
 
-Star Trivia uses data stored in MONGODB to add in questions of your choosing and also have pre-selected questions. It has a page you can study on and sharpen your skills, powered by SWAPI, an open source Star Wars API. Users can browse the vast API for informations on Films, Characters, Species, and more! 
+"Star Trivia!" uses data stored in MONGODB to add in questions of your choosing and also have pre-selected questions. It has a page you can study on and sharpen your skills, powered by SWAPI, an open source Star Wars API. Users can browse the vast API for informations on Films, Characters, Species, and more! 
 
 
 # Installation Instructions
