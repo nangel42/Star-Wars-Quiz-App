@@ -2,16 +2,20 @@
 By: Nicolas Angel
 <p align="center"><img src="frontend/src/assets/DarthVader.gif" /></p>
 
+
 # Link to "Star Trivia!"
 <a href="https://star-wars-trivia-game.herokuapp.com/">Click Here!</a>
 
+
 # Project Description
+
 "Star Trivia!" is my First attempt at a MERN stack app. This was designed as a fun, easy to use app and friendly to all ages.
 
 "Star Trivia!" uses data stored in MONGODB to add in questions of your choosing and also have pre-selected questions. It has a page you can study on and sharpen your skills, powered by SWAPI, an open source Star Wars API. Users can browse the vast API for informations on Films, Characters, Species, and more! 
 
 
 # Installation Instructions
+
 * Clone this repo down to your local machine!
 * Make an ENV File and add a mongoDB connection
 * Run the following in the terminal...
@@ -22,7 +26,9 @@ npm i
 npm i react-router-dom axios antd
 ```
 
+
 # How to Browse "Star Trivia!"
+
 DISCLAIMER: "Star Trivia!" is a work on progress, it will be updated and these pictures may be outdated!
 
 This is the Home page, feel free to click any buttons to browse.
@@ -37,7 +43,9 @@ This is the Create a question page.
 And finally, this is the More information page, powered by SWAPI.
 <p align="center"><img src="frontend/src/assets/Star-Trivia-Moreinfopage.png" /></p>
 
+
 # Technology Used
+
 * ANT Design
 * Mongoose
 * MongoDB
@@ -47,6 +55,7 @@ And finally, this is the More information page, powered by SWAPI.
 * axios
 * Vite
 
+
 # User Stories
 
 * As a Customer, I want to play a trivia game, so that I can have a fun activity to play.
@@ -55,7 +64,22 @@ And finally, this is the More information page, powered by SWAPI.
 
 * As a Colleague, I want to see the improvement of my colleague, that way I can view his progress at the end of the course.
 
+
 # Wireframes
+
+These were my proposed Wireframes for "Star Trivia!". They include features I would like to add and a basic layout of what the app would look like.
+
+This is the Home page.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF1.png" /></p>
+
+This is the Question page with the basic question layout.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF2.png" /></p>
+
+This is the Question Result page shown after the quiz is done.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF3.png" /></p>
+
+This is the More Info page showing results from SWAPI.
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF4.png" /></p>
 
 
 # Major Hurdles
@@ -74,6 +98,7 @@ I plan on implementing a few new steps...
 * Some more design features, One specifically is adding the gif at the top of the page to be the first thing you see when you launch the site!
 * Add more questions.
 * Adding the classic Star Wars crawl text! This is a must and I will be working towards getting it to work.
+* Adding authentication for High Score Tracking
 
 
 # Credits
