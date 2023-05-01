@@ -58,8 +58,8 @@ body {
   button {
     margin-top: 1rem;
     background-color: #dfdfdf;
-    border-color: #ff0000;
-    color: #ffffff;
+    border-color: #000000;
+    color: #000000;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.5rem 2rem;
@@ -83,6 +83,50 @@ body {
     color: #ffffff;
   }
   
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  #question {
+    width: 70%;
+  }
+  
+  .btn-submit {
+    background-color: #d6d6d6;
+  }
+
+  .btn-cancel {
+    background-color: #6c757d;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    font-weight: bold;
+  }
+
+  .seedquestions {
+    background-color: #919090;
+    font-weight: bold;
+    border-radius: 80%;
+    margin: 30px;
+    padding: 80px;
+  }
 
   /* refrences
   https://www.schemecolor.com/star-wars-logo-colors.php 

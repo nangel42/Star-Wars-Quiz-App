@@ -96,10 +96,13 @@ export default function CRUDSection() {
 
     return (
     <>
-        <h1>CRUD Page</h1>
+        <h1>Create a Question!</h1>
+        <h2>Or change one! (Don't Cheat!)</h2>
+
+        <br />
 
         <div>
-            <h1>Viewer Insights</h1>
+            
             <Button onClick={toggleCreateForm}>
                 {btnText}
             </Button>

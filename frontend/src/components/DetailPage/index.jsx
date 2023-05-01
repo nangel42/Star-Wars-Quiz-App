@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiInfo } from "../../../utils/api"
 import axios from "axios";
+import { Button } from 'antd';
 
 export default function DetailPage() {
 
@@ -24,7 +25,7 @@ export default function DetailPage() {
     // console.log(url)
     // console.log(category)
     // console.log(id)
-    console.log(apiDetail)
+    // console.log(apiDetail)
     // console.log(res.data)
 
     
@@ -67,31 +68,31 @@ export default function DetailPage() {
                     </ul> */}
 
 
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         } else if (category === "people") {
             return (
                 <>
                     <h1>Star Wars People!</h1>
-                    <h2>{ apiDetail.name } </h2>
-                    <h3>Birth Year: { apiDetail.birth_year }</h3>
+                    <h3>{ apiDetail.name } </h3>
+                    <p>Birth Year: { apiDetail.birth_year }</p>
                     <p>Height: { apiDetail.height } cm (About {convertHeight(apiDetail.height)})</p>
                     <p>Mass: { apiDetail.mass } kg (About {convertToPounds(apiDetail.mass)})</p>
                     <p>Hair Color: { apiDetail.hair_color }</p>
 
 
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         } else if (category === "planets") {
             return (
                 <>
                     <h1>Star Wars Planets!</h1>
-                    <h2>{ apiDetail.name } </h2>
+                    <h3>{ apiDetail.name } </h3>
                     <br />
-                    <h3>Climate: { apiDetail.climate }</h3>
-                    <h3>Terrain: { apiDetail.terrain }</h3>
+                    <p>Climate: { apiDetail.climate }</p>
+                    <p>Terrain: { apiDetail.terrain }</p>
                     <p>Population: { apiDetail.population }</p>
                     <p>Gravity: { apiDetail.gravity }</p>
                     <p>Orbital Period: { apiDetail.orbital_period }</p>
@@ -101,23 +102,23 @@ export default function DetailPage() {
 
 
 
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         } else if (category === "species") {
             return (
                 <>
                     <h1>Star Wars Species!</h1>
-                    <h2>{ apiDetail.name } </h2>
-                    <h3>Classification: { apiDetail.classification }</h3>
-                    <h3>Designation: { apiDetail.designation }</h3>
+                    <h3>{ apiDetail.name } </h3>
+                    <p>Classification: { apiDetail.classification }</p>
+                    <p>Designation: { apiDetail.designation }</p>
                     <p>Average Height: { apiDetail.average_height } cm (About {convertHeight(apiDetail.average_height)})</p>
                     <p>Average Lifespan: { apiDetail.average_lifespan } years</p>
                     <p>Language: { apiDetail.language }</p>
 
 
 
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         } else if (category === "starships") {
@@ -125,7 +126,7 @@ export default function DetailPage() {
                 <>
                     <h1>Star Wars Starships!</h1>
                     <h2>{ apiDetail.name } </h2>
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         } else if (category === "vehicles") {
@@ -133,7 +134,7 @@ export default function DetailPage() {
                 <>
                     <h1>Star Wars Vehicles!</h1>
                     <h2>{ apiDetail.name } </h2>
-                    <Link to="/info"><button>Back</button></Link>
+                    <Link to="/info"><Button>Back</Button></Link>
                 </>
             )
         }

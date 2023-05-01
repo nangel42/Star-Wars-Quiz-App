@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { getInfo } from "../../../utils/api"
 import { useParams } from 'react-router-dom'
 import MoreInfoDisplay from "../MoreInfoDisplay";
+import { Button } from 'antd';
 
 export default function MoreInfoPage() {
 
@@ -35,8 +36,8 @@ export default function MoreInfoPage() {
             <button onClick={() => setCategory('people')}>People</button>
             <button onClick={() => setCategory('planets')}>Planets</button>
             <button onClick={() => setCategory('species')}>Species</button>
-            <button onClick={() => setCategory('starships')}>Starships</button>
-            <button onClick={() => setCategory('vehicles')}>Vehicles</button>
+            {/* <button onClick={() => setCategory('starships')}>Starships</button>
+            <button onClick={() => setCategory('vehicles')}>Vehicles</button> */}
 
             <br />
             <br />
@@ -48,7 +49,7 @@ export default function MoreInfoPage() {
 
             <footer>
                 <Link to ="/">
-                    <button>Back</button>
+                    <Button>Back</Button>
                 </Link>
             </footer>
         </>

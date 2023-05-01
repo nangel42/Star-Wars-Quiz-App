@@ -42,7 +42,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
 
     //  Default JSX of each comment
     let questionElement = <div>
-        <p>{data.question}</p>
+        <p className="seedquestions">{data.question}</p>
         <p>{data.difficulty}</p>
         <div>
             <Button onClick={() => { setEditMode(true) }}>
@@ -60,6 +60,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="question">Question</label>
+                <br />
                 <input
                     type="text"
                     id="question"
@@ -72,6 +73,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
             {/* map over answerrs */}
             <div>
                 <label htmlFor="answers">Answers</label>
+                <br />
                 {editForm.answers.map((answer, i) => (
                     <input
                         key = {i}
@@ -94,6 +96,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
 
             <div>
                 <label htmlFor="correctAnswer">Correct Answer</label>
+                <br />
                 <input
                     type="text"
                     id="correctAnswer"
@@ -104,6 +107,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
             </div>
             <div>
                 <label htmlFor="category">Category</label>
+                <br />
                 <input
                     type="text"
                     id="category"
@@ -114,6 +118,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
             </div>
             <div>
                 <label htmlFor="difficulty">Difficulty</label>
+                <br />
                 <input
                     type="text"
                     id="difficulty"
@@ -131,3 +136,4 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
 }
 return questionElement
 }
+
