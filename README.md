@@ -47,7 +47,27 @@ And finally, this is the More information page, powered by SWAPI.
 * axios
 * Vite
 
+# User Stories
+
+* As a Customer, I want to play a trivia game, so that I can have a fun activity to play.
+
+* As an Potential Employer, I want to see what this MERN stack file has functionality wise, so that I can decide if he has the skills the company is looking for.
+
+* As a Colleague, I want to see the improvement of my colleague, that way I can view his progress at the end of the course.
+
+# Wireframes
+
+
+# Major Hurdles
+
+* Heroku. I am still getting used to Heroku and how it works. It is very tedious and I dont quite understand it all, but I sure I will one day!
+* React. React was a little challenging for me. It is very nice to use vite and it tells you where issues lie, but React is still new to me and I will have to keep working with it to understand.
+* Questions CRUD. I currently have a bug where I cant get the questions to appear with the seeded questions and it might be because of ANT design or it might be because I am doing something wrong. Not 100% but still need to diagnose that problem.
+* SWAPI API. With the starships and vehicles part not working correctly, I am not sure I will be able to implement those into my project, but I want more time to look into it.
+
+
 # Next Steps
+
 I plan on implementing a few new steps...
 * Unfortunately, while SWAPI was an awesome API to use, it does not include pictures NOR is it being worked on anymore. I want to integrate the Pipedream Photos API side by side with SWAPI that way all information points can have photos to go along with the data.
 * I want to Paginate the More information area.
@@ -55,7 +75,9 @@ I plan on implementing a few new steps...
 * Add more questions.
 * Adding the classic Star Wars crawl text! This is a must and I will be working towards getting it to work.
 
+
 # Credits
+
 **Nicolas Angel**
 
 * Links:
