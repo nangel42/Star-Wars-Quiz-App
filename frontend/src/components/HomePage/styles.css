@@ -4,6 +4,14 @@ body {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
   }
+
+  .Intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
   h1, h3, p {
     text-align: center;

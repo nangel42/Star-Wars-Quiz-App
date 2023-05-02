@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Radio, Button } from "antd";
+import darthVader from "../../assets/DarthVaderOneLoop.gif";
 import "./styles.css";
 
 
@@ -25,6 +26,10 @@ export default function HomePage() {
             <h3>A Star Wars Trivia App!</h3>
 
             <p>How well do you know the Star Wars Universe?</p>
+
+            {/* <p><img className = "Intro" src= { darthVader } alt="Star Wars" /></p> */}
+
+            <br />
 
             <div>
                 <Radio.Group onChange={difficultyChange} value={difficulty}>

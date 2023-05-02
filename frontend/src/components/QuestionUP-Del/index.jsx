@@ -127,7 +127,7 @@ export default function QuestionUPDel({ data, refreshQuestions }) {
                     onChange={handleInputChange}
                 />
             </div>
-            <Button type="submit" className="btn btn-submit" >Submit</Button>
+            <Button type="submit" className="btn btn-submit" onClick={handleSubmit} >Submit</Button>
             <Button type="button" className="btn btn-cancel" onClick={() => { setEditMode(false) }}>Cancel</Button>
             <Button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</Button>
         </form>
