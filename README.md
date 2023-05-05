@@ -22,9 +22,11 @@ By: Nicolas Angel
 ```
 npm i
 ```
+* Then run the following command to launch it from a local server... 
 ```
-npm i react-router-dom axios antd
+npm run start
 ```
+* In a browser, open what ever port was specified in the terminal and feel free to browse "Star Trivia!"
 
 
 # How to Browse "Star Trivia!"
