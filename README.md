@@ -9,9 +9,11 @@ By: Nicolas Angel
 
 # Project Description
 
-"Star Trivia!" is my First attempt at a MERN stack app. This was designed as a fun, easy to use app and friendly to all ages.
+Looking for a fun and engaging way to test your knowledge of the Star Wars universe? Look no further than "Star Trivia!" - a MERN stack app that lets you choose your own questions and provides pre-selected ones for all ages to enjoy.
 
-"Star Trivia!" uses data stored in MONGODB to add in questions of your choosing and also have pre-selected questions. It has a page you can study on and sharpen your skills, powered by SWAPI, an open source Star Wars API. Users can browse the vast API for informations on Films, Characters, Species, and more! 
+Using data stored in MONGODB, "Star Trivia!" offers a customizable trivia experience, while also providing a study page powered by SWAPI, an open source Star Wars API. With access to information on Films, Characters, Species, and more, users can immerse themselves in the Star Wars world and hone their skills.
+
+Whether you're a die-hard Star Wars fan or just looking for a fun way to pass the time, "Star Trivia!" is the perfect app for you. So why wait? Try it out today and see how much you really know about a galaxy far, far away!
 
 
 # Installation Instructions
