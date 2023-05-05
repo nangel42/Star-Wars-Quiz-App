@@ -36,16 +36,16 @@ npm run start
 DISCLAIMER: "Star Trivia!" is a work on progress, it will be updated and these pictures may be outdated!
 
 This is the Home page, feel free to click any buttons to browse.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-Homepage.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Homepage.png" height = "80%" width = "80%"/></p>
 
 This is the Quiz page, where the main quiz will be taken.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-Quizpage.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Quizpage.png" height = "80%" width = "80%"/></p>
 
 This is the Create a question page.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-Createpage.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Createpage.png" height = "80%" width = "80%"/></p>
 
 And finally, this is the More information page, powered by SWAPI.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-Moreinfopage.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-Moreinfopage.png" height = "80%" width = "80%"/></p>
 
 
 # Technology Used
@@ -60,13 +60,13 @@ And finally, this is the More information page, powered by SWAPI.
 * Vite
 
 
-# User Stories
+<!-- # User Stories
 
 * As a Customer, I want to play a trivia game, so that I can have a fun activity to play.
 
 * As an Potential Employer, I want to see what this MERN stack file has functionality wise, so that I can decide if he has the skills the company is looking for.
 
-* As a Colleague, I want to see the improvement of my colleague, that way I can view his progress at the end of the course.
+* As a Colleague, I want to see the improvement of my colleague, that way I can view his progress at the end of the course. -->
 
 
 # Wireframes
@@ -74,16 +74,16 @@ And finally, this is the More information page, powered by SWAPI.
 These were my proposed Wireframes for "Star Trivia!". They include features I would like to add and a basic layout of what the app would look like.
 
 This is the Home page.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-WF1.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF1.png" height = "80%" width = "80%"/></p>
 
 This is the Question page with the basic question layout.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-WF2.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF2.png" height = "80%" width = "80%"/></p>
 
 This is the Question Result page shown after the quiz is done.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-WF3.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF3.png" height = "80%" width = "80%"/></p>
 
 This is the More Info page showing results from SWAPI.
-<p align="center"><img src="frontend/src/assets/Star-Trivia-WF4.png" /></p>
+<p align="center"><img src="frontend/src/assets/Star-Trivia-WF4.png" height = "80%" width = "80%"/></p>
 
 
 # Major Hurdles
