@@ -19,7 +19,7 @@ Whether you're a die-hard Star Wars fan or just looking for a fun way to pass th
 # Installation Instructions
 
 * Clone this repo down to your local machine!
-* Make an ENV File and add a mongoDB connection
+* Make an `.env` File and add a mongoDB connection
 * Run the following in the terminal...
 ```
 npm i
